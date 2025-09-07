@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Hunting - IS/IT/Cybersecurity Internship/Part-Time - Project Charter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f1eb;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2d5d3b, #4a7c59);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        .header p {
+            margin: 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .student-info {
+            background: #e8f5e8;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 5px solid #2d5d3b;
+        }
+        
+        .student-info h3 {
+            color: #2d5d3b;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #2d5d3b;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .info-value {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .section-title {
+            margin: 0;
+            color: #2d5d3b;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-content {
+            padding: 20px;
+        }
+        
+        .placeholder {
+            background: #fff3cd;
+            border: 2px dashed #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            text-align: center;
+            color: #856404;
+            font-style: italic;
+        }
+        
+        .completed-work {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .completed-header {
+            color: #155724;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .scope-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .scope-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            border-left: 4px solid transparent;
+        }
+        
+        .scope-card.in-scope {
+            border-left-color: #28a745;
+        }
+        
+        .scope-card.roadmap {
+            border-left-color: #17a2b8;
+        }
+        
+        .scope-card.out-scope {
+            border-left-color: #dc3545;
+        }
+        
+        .scope-card h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .stakeholder-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .stakeholder-table th {
+            background: #2d5d3b;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 14px;
+        }
+        
+        .stakeholder-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 13px;
+        }
+        
+        .stakeholder-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .power-interest-grid {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .grid-placeholder {
+            background: #e9ecef;
+            border: 2px dashed #6c757d;
+            border-radius: 10px;
+            padding: 40px 20px;
+            color: #6c757d;
+            font-style: italic;
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 14px;
+            color: #1976d2;
+        }
+        
+        .instructions strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .scope-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Job Hunting - IS/IT/Cybersecurity Internship/Part-Time</h1>
+            <p>Project Charter - Managing IT Projects Course</p>
+        </div>
+        
+        <div class="content">
+            <!-- Student Information -->
+            <div class="student-info">
+                <h3>Student Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Student Name:</div>
+                        <div class="info-value">Daniel Aldana</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Course:</div>
+                        <div class="info-value">Managing IT Projects</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Semester:</div>
+                        <div class="info-value">Fall 2025</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 1: Project Title & Description -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">📋 1. Project Title & Description</h2>
+                </div>
+                <div class="section-content">
+                    <div class="instructions">
+                        <strong>Instructions:</strong>
+                        Replace the placeholder below with your specific project information. Include a clear project name and 2-3 sentences describing what you will deliver.
+                    </div>
+                    
+                    <div class="placeholder">
+                        <h3>Project Title: Job Hunting - IS/IT/Cybersecurity Internship/Part-Time</h3>
+                        <p>This semester-long project will focus on job hunting to prepare and apply to internships/part-time opportunities in relation to my studies. This will involve me conducting a self-assessment of all my academic achievements, creating and tailoring application documents based on job requirements, communicating with professors and peers to increase confidence in applying to positions, and getting feedback on resumes and cover letters from stakeholders (professors, counselors, peers, etc.). This project will implement the cybersecurity knowledge I've learned thus far and bring me closer to my mission of finding working opportunities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Vision, Mission & Strategy Alignment -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">🎯 2. Vision, Mission & Strategy Alignment</h2>
+                </div>
+                <div class="section-content">
+                    <div class="instructions">
+                        <strong>Instructions:</strong>
+                        Explain how this project aligns with your personal mission, vision, and strategic goals. Reference your previous mission/vision/strategy work.
+                    </div>
+                    
+                    
+<h4>Personal Mission Connection:</h4>
+<p>This project supports my mission of graduating and finding meaningful work opportunities in the CIS field. By preparing application documents, gaining feedback, and applying to internships, I am working productively toward the same goal my mission highlights: pursuing opportunities that interest me while learning and growing from new experiences.</p>
+
+<h4>Vision Alignment:</h4>
+<p>This project supports and aligns with my vision by helping me secure an internship or part-time role in the CIS field. Finding, applying for, and securing a position through this project will move me toward financial stability while also providing valuable real-world experience.</p>
+
+<h4>Strategic Goal Support:</h4>
+<p>Conducting a job search will advance specific strategies, mainly expanding my network and self-learning. By engaging with my stakeholders, I will grow and establish a great network with individuals I can rely on now and in the future. Furthermore, this project will motivate me to conduct study plans and review cybersecurity concepts to ensure that my knowledge in this area meets manager and job requirements, and positions me to confidently pursue certifications in the future.</p>
+
+                </div>
+            </div>
+
+            <!-- Section 3: Business Case -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">💼 3. Business Case & Justification</h2>
+                </div>
+                <div class="section-content">
+                    <div class="instructions">
+                        <strong>Instructions:</strong>
+                        Describe how this project will add value to you either professionally or personally. What benefits will you gain?
+                    </div>
+                    
+                    
+<h4>Professional Value:</h4>
+<p>Performing and completing this project will directly benefit my future career. I will learn new skills and strengthen existing ones throughout the execution of this project. It will also require me to engage with multiple stakeholders, thus building valuable connections and expanding my professional network. In addition, I will tailor application documents to specific job requirements, demonstrating commitment and genuine interest in each position I apply to.</p>
+
+<h4>Personal Value:</h4>
+<p>This project will help me grow in confidence, which I have struggled with in the past. I often compare myself to others and their experiences, which fuels my imposter syndrome. I will gain a supportive environment that increases my self-worth by stepping out of my comfort zone, expanding my network, and highlighting my academic achievements. With this growing confidence, I can focus more clearly on my journey and continue following my mission and vision.</p>
+
+<h4>Learning Outcomes:</h4>
+<p>From this project, I will gain important learning outcomes such as creating and tailoring resumes, cover letters, and portfolios. I will also strengthen technical skills and develop effective study plans. I will learn to showcase and highlight my experiences at networking events or through digital platforms like my portfolio and LinkedIn. Furthermore, I will strengthen my ability to communicate confidently at both professional and personal levels — whether in follow-ups, expressing interest, or casual conversations.</p>
+
+                </div>
+            </div>
+
+            <!-- Section 4: High-Level Scope -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">📏 4. High-Level Scope</h2>
+                </div>
+                <div class="section-content">
+                    <div class="completed-work">
+                        <div class="completed-header">✅ Use Your Previous Scope Assignment</div>
+                        <p>Copy and paste your scope document content from your previous assignment into the placeholders below.</p>
+                    </div>
+                    
+                    <div class="scope-grid">
+<div class="scope-card in-scope">
+    <h4>✅ In Scope for Semester Project</h4>
+    <ul>
+        <li>Conducting self-assessments of my academic skills, knowledge, and experiences</li>
+        <li>Using resources offered by the CSULA Career Center for resume reviews, interview practice, and job search support</li>
+        <li>Communicating with faculty, students, and professionals for guidance and feedback</li>
+        <li>Tailoring resumes, cover letters, and other application documents to specific job postings</li>
+        <li>Reviewing CIS course materials to highlight and evidence relevant knowledge and skills</li>
+        <li>Researching companies and analyzing job requirements to understand business values and processes</li>
+    </ul>
+</div>
+
+<div class="scope-card roadmap">
+    <h4>🗺️ Roadmap Items (≤ 6 Months After Semester Ends)</h4>
+    <ul>
+        <li>Following up with professors and peers regarding ongoing career progress</li>
+        <li>Attending networking events to expand professional connections</li>
+        <li>Focusing on new semester courses and analyzing additional skills gained</li>
+        <li>Conducting hands-on activities to strengthen cybersecurity concepts</li>
+        <li>Preparing for the ISC2 CC Certification exam</li>
+        <li>Developing a professional portfolio (e.g., GitHub projects, personal website)</li>
+    </ul>
+</div>
+
+<div class="scope-card out-scope">
+    <h4>❌ Out of Scope</h4>
+    <ul>
+        <li>Applying to mid-to-high level IS/IT/Cybersecurity Jobs
+            <ul><li>Long-term (vision statement)</li></ul>
+        </li>
+        <li>Taking the ISC2 CC Certification (or any certification)
+            <ul><li>Not feasible within the semester timeframe</li></ul>
+        </li>
+        <li>Conducting a High-Level Resume (2-page)
+            <ul><li>Too big and challenging to conduct at present</li></ul>
+        </li>
+        <li>Applying to out-of-state positions
+            <ul><li>Too big (even if it’s an internship)</li></ul>
+        </li>
+        </ul>
+        </li>
+    </ul>
+</div>
+</div></div></div></div>
+                </div>
+            </div>
+
+            <!-- Section 5: Stakeholder Register -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">👥 5. Stakeholder Register</h2>
+                </div>
+                <div class="section-content">
+                    <div class="completed-work">
+                        <div class="completed-header">✅ Use Your Previous Stakeholder Assignment</div>
+                        <p>Copy and paste your stakeholder information from your previous assignment. Include both the table and your power-interest grid.</p>
+                    </div>
+                    
+                    <table class="stakeholder-table">
+                        <thead>
+                            <tr>
+                                <th>Stakeholder</th>
+                                <th>Category</th>
+                                <th>Role/Interest</th>
+                                <th>Power</th>
+                                <th>Interest</th>
+                                <th>Engagement Strategy</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr>
+<td>Family</td>
+<td>Internal</td>
+<td>Provide support and motivation throughout the project timeline.</td>
+<td>Low</td>
+<td>High</td>
+<td>Keep Informed: Weekly progress conversations, feedback and monitoring, and a supportive environment (motivation).</td>
+</tr>
+<tr>
+<td>Friends</td>
+<td>Internal</td>
+<td>Provide support and share work experiences to set expectations for a working environment.</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Keep Informed: Bi-weekly check-ins on progress, discuss work experiences and job expectations.</td>
+</tr>
+<tr>
+<td>Professors</td>
+<td>Internal</td>
+<td>Guide and provide feedback on application documents; support the project concept; share professional experiences (how they started, how they grew). Contacts: Daniel Razmjou (drazmjo2@calstatela.edu), Arun Aryal (aaryal@calstatela.edu).</td>
+<td>Medium</td>
+<td>High</td>
+<td>Manage Closely: Weekly-to-biweekly discussions on progress; feedback on resumes/cover letters; guidance on professional display (e.g., LinkedIn).</td>
+</tr>
+<tr>
+<td>Hiring Managers</td>
+<td>External</td>
+<td>Ensure I’m qualified, meet job requirements, and fit team needs.</td>
+<td>High</td>
+<td>High</td>
+<td>Manage Closely: Align to job requirements; tailor application materials; engage professionally and promptly.</td>
+</tr>
+<tr>
+<td>Classmates</td>
+<td>External</td>
+<td>Provide professional support and share insights from their work experiences.</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Keep Informed: Weekly-to-biweekly progress conversations; advice for interview preparation and job readiness.</td>
+</tr>
+<tr>
+<td>Clubs (e.g., CARP)</td>
+<td>External</td>
+<td>Support the project and provide insight into working environments (may not be CIS-related).</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Monitor: Monthly progress conversations; supportive environment; gain insight into workplace expectations.</td>
+</tr>
+<tr>
+<td>Professionals (Networking Events)</td>
+<td>External</td>
+<td>Provide career guidance, opportunities, and general support.</td>
+<td>Medium</td>
+<td>High</td>
+<td>Manage Closely: Build strong professional relationships; practice elevator pitch/LinkedIn; request feedback on application documents.</td>
+</tr>
+<tr>
+<td>ISC2</td>
+<td>Regulatory</td>
+<td>Guide and support CC certification preparation (rules, format, resources).</td>
+<td>High</td>
+<td>Low</td>
+<td>Keep Satisfied: Follow rules and procedures; use provided resources; create appropriate study plans.</td>
+</tr>
+<tr>
+<td>Career Counselors</td>
+<td>External</td>
+<td>Provide professional and personal guidance, resources, and notifications for networking events.</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Keep Informed: Deep discussions on job hunting; resume/cover feedback; use resources (resume builder, mock interviews); networking advice; upcoming events.</td>
+</tr></tbody>
+                    </table>
+                    
+                    <div class="power-interest-grid">
+                        <h4>Power-Interest Grid Visualization</h4>
+                        <div class="grid-placeholder">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left;">
+  <div style="background:#88e287;padding:12px;border:1px solid #e9ecef;border-radius:8px;">
+    <strong>High Power / Low Interest — Keep Satisfied</strong>
+    <ul><li>ISC2</li></ul>
+  </div>
+  <div style="background:#e99488;padding:12px;border:1px solid #e9ecef;border-radius:8px;">
+    <strong>High Power / High Interest — Manage Closely</strong>
+    <ul>
+      <li>Hiring Managers</li>
+      <li>Professors</li>
+      <li>Professionals (Networking Events)</li>
+    </ul>
+  </div>
+  <div style="background:#e5e88c;padding:12px;border:1px solid #e9ecef;border-radius:8px;">
+    <strong>Low Power / Low Interest — Monitor</strong>
+    <ul><li>Clubs (e.g., CARP)</li></ul>
+  </div>
+  <div style="background:#ceb1e8;padding:12px;border:1px solid #e9ecef;border-radius:8px;">
+    <strong>Low Power / High Interest — Keep Informed</strong>
+    <ul>
+      <li>Family</li>
+      <li>Friends</li>
+      <li>Classmates</li>
+      <li>Career Counselors</li>
+    </ul>
+  </div>
+</div>
+</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Note -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">📝 Additional Charter Components</h2>
+                </div>
+                <div class="section-content">
+                    <div class="instructions">
+                        <strong>Note for Future Updates:</strong>
+                        This charter will be expanded throughout the semester as we cover additional project management components including:
+                        <ul>
+                            <li>Project Methodology Selection</li>
+                            <li>Deliverables & Definition of Done</li>
+                            <li>High-Level Timeline & Milestones</li>
+                            <li>Execution Plan Overview</li>
+                            <li>Risk Register</li>
+                            <li>Acceptance Criteria</li>
+                            <li>Project Manager Authority & Approvals</li>
+                        </ul>
+                        Keep this HTML file - you'll be adding to it as the semester progresses!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
