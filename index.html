@@ -243,7 +243,59 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+        .deliverable-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 10px;
+        }
+        .deliverable-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 14px;
+            border-left: 4px solid #4a7c59;
+        }
+        .deliverable-card h4 {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+            color: #2d5d3b;
+        }
+        .deliverable-meta {
+            font-size: 12px;
+            color: #555;
+            margin: 6px 0 10px 0;
+        }
+        .deliverable-card ul {
+            margin: 6px 0 0 18px;
+        }
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .budget-table th {
+            background: #2d5d3b;
+            color: #fff;
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+        .budget-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 13px;
+        }
+        .budget-note {
+            background: #fff3cd;
+            border: 1px dashed #ffc107;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 12px;
+            font-size: 13px;
+        }
+
+</style>
 </head>
 <body>
     <div class="container">
@@ -528,7 +580,187 @@
                 </div>
             </div>
 
-            <!-- Footer Note -->
+            
+            <!-- Section 6: Deliverables & Definition of Done -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">📦 6. Deliverables &amp; Definition of Done</h2>
+                </div>
+                <div class="section-content">
+                    <div class="instructions">
+                        <strong>Instructions:</strong>
+                        For each deliverable, list a clear <em>Definition of Done</em>, core tasks, dependencies, and rough effort estimates.
+                    </div>
+                    
+<div class="deliverable-grid">
+    <div class="deliverable-card">
+        <h4>A Well-Constructed Resume(s)</h4>
+        <div class="deliverable-meta"><strong>Type:</strong> Tangible</div>
+        <ul>
+            <li><strong>SMART Description:</strong> Create 1-page resumes aligning my experiences with job requirements; key step toward landing interviews; completion by mid-semester.</li>
+            <li><strong>Definition of Done:</strong> Reviewed by multiple stakeholders; tailored to job requirements; accurately reflects my academic experiences.</li>
+        </ul>
+    </div>
+    <div class="deliverable-card">
+        <h4>Increase Professional Network</h4>
+        <div class="deliverable-meta"><strong>Type:</strong> Outcome</div>
+        <ul>
+            <li><strong>SMART Description:</strong> Communicate with stakeholders at campus and/or networking events; expand my network, measured by before-and-after comparison; goal: maintain long-term connections; metric will conclude by the end of the semester.</li>
+            <li><strong>Definition of Done:</strong> Initiated conversations with new stakeholders; work insights gained; added LinkedIn connections; established trusted relationship.</li>
+        </ul>
+    </div>
+    <div class="deliverable-card">
+        <h4>ISC2 CC Preparation</h4>
+        <div class="deliverable-meta"><strong>Type:</strong> Intangible</div>
+        <ul>
+            <li><strong>SMART Description:</strong> ISC2 CC certification preparation by conduct study plans; time and progress will be documented weekly; increase expertise and knowledge for security focus positions; preparation expected to be completed by mid-to-end of semester.</li>
+            <li><strong>Definition of Done:</strong> Study plan documented; resources reviewed; professional guidance sought; mock exams completed.</li>
+        </ul>
+    </div>
+    <div class="deliverable-card">
+        <h4>Applying to Job Positions</h4>
+        <div class="deliverable-meta"><strong>Type:</strong> Intangible</div>
+        <ul>
+            <li><strong>SMART Description:</strong> Analyze job requirements and apply to positions based on qualifications; track applied jobs; final steps toward achieving my mission: landing a CIS position; completion by end of semester.</li>
+            <li><strong>Definition of Done:</strong> Ensure application documents aligned with requirements; applications submitted; engaged in genuine conversations with hiring managers; mock interviews completed.</li>
+        </ul>
+    </div>
+</div>
+</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 7: Budget Estimation -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">💲 7. Budget Estimation</h2>
+                </div>
+                <div class="section-content">
+<div class="instructions">
+    <strong>Instructions:</strong>
+    Provide a realistic, draft-level cost view. Include tools, optional subscriptions, study materials, travel, and note time as a resource.
+</div>
+
+<h4>Labor Costs</h4>
+<p>The primary labor cost for this project is my own effort in developing deliverables, networking, and preparing application materials. Based on my WBS and duration estimates, I expect to spend approximately <strong>72–96 hours</strong> over the semester. Using a conservative student/entry-level market rate of <strong>$20/hour</strong>, this equates to a labor cost range of <strong>$1,440–$1,920</strong>.</p>
+<table class="budget-table">
+    <thead>
+        <tr><th>Role</th><th>Hours</th><th>Rate</th><th>Estimated Cost</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Student PM/Analyst (self)</td><td>72–96</td><td>$20/hr</td><td>$1,440 – $1,920</td></tr>
+    </tbody>
+</table>
+
+<h4>Equipment &amp; Software</h4>
+<table class="budget-table">
+    <thead>
+        <tr><th>Item</th><th>Description</th><th>Estimated Cost</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>GitHub Pages / Notion / Google Sheets</td>
+            <td>Hosting and tracking tools for portfolio and application pipeline</td>
+            <td>$0</td>
+        </tr>
+        <tr>
+            <td>LinkedIn Learning</td>
+            <td>Self-study videos for cybersecurity refreshers</td>
+            <td>$0 (via CSULA access)</td>
+        </tr>
+        <tr>
+            <td>Microsoft Office (optional)</td>
+            <td>Productivity suite for document authoring (or use Google Docs)</td>
+            <td>$0–$60</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Materials</h4>
+<table class="budget-table">
+    <thead>
+        <tr><th>Item</th><th>Description</th><th>Estimated Cost</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Resume Printing</td>
+            <td>Hard copies for networking events/interviews (as needed)</td>
+            <td>$10–$20</td>
+        </tr>
+        <tr>
+            <td>ISC2 CC Prep Materials</td>
+            <td>Optional practice tests and study guides for certification preparation</td>
+            <td>$0–$60</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Services</h4>
+<table class="budget-table">
+    <thead>
+        <tr><th>Item</th><th>Description</th><th>Estimated Cost</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Career Center Services</td>
+            <td>Resume reviews, mock interviews, advising</td>
+            <td>$0 (included)</td>
+        </tr>
+        <tr>
+            <td>LinkedIn Premium (optional)</td>
+            <td>Applicant insights, InMail, and networking tools (1 month)</td>
+            <td>$40</td>
+        </tr>
+        <tr>
+            <td>Networking Events (transport/fees)</td>
+            <td>Local transit, parking, or entry for on/off-campus events</td>
+            <td>$20–$40</td>
+        </tr>
+        <tr>
+            <td>Workshops/Meetups (optional)</td>
+            <td>Professional sessions or student org events (if applicable)</td>
+            <td>$0–$20</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Contingency &amp; Risks</h4>
+<p>Because this project primarily uses free student resources, overall budget risk is low. A <strong>15% contingency reserve</strong> is included to cover unexpected costs (e.g., materials, transportation, or optional services). Based on the estimates above, this contingency amounts to approximately <strong>$150–$250</strong>.</p>
+<ul>
+    <li><strong>Risk 1 – Certification prep costs exceed plan:</strong> Mitigate by relying on free LinkedIn Learning and CSULA materials before purchasing guides.</li>
+    <li><strong>Risk 2 – Event transportation/fees higher than expected:</strong> Mitigate by prioritizing free on-campus or virtual events.</li>
+    <li><strong>Risk 3 – Additional printing or supplies needed:</strong> Mitigate by using digital distribution when possible and printing selectively.</li>
+</ul>
+<h4>Budget Summary</h4>
+<table class="budget-table">
+  <tbody>
+    <tr><td><strong>SUBTOTAL DIRECT COSTS</strong></td><td>$1,805.00</td></tr>
+    <tr><td><strong>Contingency Reserve (15%)</strong></td><td>$270.75</td></tr>
+    <tr><td><strong>TOTAL PROJECT BUDGET</strong></td><td><strong>$2,075.75</strong></td></tr>
+  </tbody>
+</table>
+
+<h4>Budget Breakdown</h4>
+<table class="budget-table">
+  <thead>
+    <tr><th>Category</th><th>% of Total</th><th>Amount</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Labor</td><td>80.9%</td><td>$1,680.00</td></tr>
+    <tr><td>Equipment/Software</td><td>1.4%</td><td>$30.00</td></tr>
+    <tr><td>Materials</td><td>1.7%</td><td>$35.00</td></tr>
+    <tr><td>Services</td><td>2.9%</td><td>$60.00</td></tr>
+    <tr><td>Contingency</td><td>13.0%</td><td>$270.75</td></tr>
+  </tbody>
+</table>
+<p class="budget-note">Assumptions used for midpoint estimate: 84 hours at $20/hr; Equipment/Software $30; Materials $35; Services $60; Contingency 15% of direct costs.</p>
+
+</div>
+                </div>
+            </div>
+
+<!-- Footer Note -->
             <div class="section">
                 <div class="section-header">
                     <h2 class="section-title">📝 Additional Charter Components</h2>
