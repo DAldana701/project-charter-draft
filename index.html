@@ -295,6 +295,31 @@
             font-size: 13px;
         }
 
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 10px;
+        }
+        .screenshot-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid #e9ecef;
+        }
+        .screenshot-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        .caption {
+            font-size: 12px;
+            color: #555;
+            margin-top: 6px;
+        }
+
 </style>
 </head>
 <body>
@@ -757,6 +782,60 @@
 <p class="budget-note">Assumptions used for midpoint estimate: 84 hours at $20/hr; Equipment/Software $30; Materials $35; Services $60; Contingency 15% of direct costs.</p>
 
 </div>
+                </div>
+            </div>
+
+
+            <!-- Section 8: Project Methodology -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">🛠️ 8. Project Methodology</h2>
+                </div>
+                <div class="section-content">
+                    <div class="instructions">
+                        <strong>Instructions:</strong>
+                        Explain your chosen methodology, why it fits your project, and include a diagram illustrating the process flow.
+                    </div>
+                    <p><strong>Chosen Methodology:</strong> Predictive (Waterfall)</p>
+                    <p>This project follows a <em>Predictive methodology</em> because most deliverables are fixed in scope and follow a traditional sequence of planning, execution, monitoring, and closing. 
+                    Examples include resume drafts, ISC2 CC preparation, and job applications. While some deliverables will go through iterative feedback (such as resume revisions), the majority of tasks are planned in advance with clear outcomes. 
+                    This makes the predictive approach the best overall fit for my project.</p>
+                    
+                    <div class="diagram">
+                        <img src="Project Plan Diagram.png" alt="Predictive Methodology Diagram" style="max-width:100%; height:auto; border:1px solid #ccc; border-radius:8px;">
+                        <p class="caption">Figure 1: Predictive Project Plan Diagram (Weeks 2–Final Week)</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Section 9: Project Tools -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">🧰 9. Project Tools</h2>
+                </div>
+                <div class="section-content">
+                    <div class="instructions">
+                        <strong>Instructions:</strong>
+                        Explain your tool selection, why it fits the chosen methodology, and include screenshots showing how you set up the project.
+                    </div>
+
+                    
+<h4>Tool Selection Explanation</h4>
+<p>I looked at three tools for my project: <strong>Microsoft Project</strong>, <strong>Trello</strong>, and <strong>Monday.com</strong>.</p>
+<p>At first, I thought about using Microsoft Project, but it felt like way too much for what I needed. There are a lot of features, and I knew I’d probably get overwhelmed. I also thought about Trello since I’ve used it before in other classes. Trello is great for quick boards, but it’s really better for Agile projects. Since my project is predictive, I felt it wasn’t the right match.</p>
+<p>I ended up going with <strong>Monday.com</strong>. Honestly, when I first opened it, I felt overwhelmed too, but once I learned how to use it, I realized it was exactly what I needed. Monday.com let me group tasks by deliverables, set dependencies, and assign timelines. For example, I could clearly show that applying to jobs depends on finishing resumes, which depends on resume prep. It took me a couple of days to set everything up, but now I have a timeline that matches my WBS and methodology diagram (and the class schedule (PMI Process Group)). It helps me stay organized and keeps me from losing track of where I’m at during the semester.</p>
+<h4>Screenshots</h4>
+                    <div class="tool-grid">
+                        <div class="screenshot-card">
+                            <img src="ProjectTool#1.png" alt="Monday.com board showing overall semester-long and ISC2 CC preparation">
+                            <p class="caption">Figure 2: Overall semester-long tasks and ISC2 CC preparation with dependencies and timelines.</p>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="ProjectTool#2.png" alt="Monday.com board showing resume preparation process and resume construction">
+                            <p class="caption">Figure 3: Resume preparation and construction tasks with linked dependencies.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
